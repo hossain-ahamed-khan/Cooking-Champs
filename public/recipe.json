@@ -1,0 +1,109 @@
+[
+    {
+        "recipe_id": "1",
+        "recipe_name": "Classic Spaghetti Carbonara",
+        "recipe_img": "https://i.ibb.co/XzbFBJT/Classic-Spaghetti-Carbonara.jpg",
+        "short_description": "Authentic Italian pasta dish with creamy egg sauce and crispy pancetta",
+        "ingredients": [
+            "8 oz spaghetti",
+            "4 slices pancetta or bacon, chopped",
+            "2 large eggs",
+            "1/2 cup grated Parmesan cheese",
+            "2 cloves garlic, minced",
+            "Salt and black pepper to taste",
+            "2 tablespoons chopped parsley (optional)"
+        ],
+        "preparing_time": 20,
+        "calories": 450
+    },
+    {
+        "recipe_id": "2",
+        "recipe_name": "Vegetable Stir-Fry",
+        "recipe_img": "https://i.ibb.co/Y8JC3C2/Vegetable-Stir-Fry.jpg",
+        "short_description": "Colorful and healthy stir-fried vegetables with tofu in a savory sauce",
+        "ingredients": [
+            "1 block firm tofu, cubed",
+            "1 red bell pepper, sliced",
+            "1 yellow bell pepper, sliced",
+            "1 cup snow peas",
+            "1 cup sliced carrots",
+            "3 green onions, chopped",
+            "3 tablespoons soy sauce",
+            "1 tablespoon sesame oil",
+            "2 cloves garlic, minced",
+            "1 tablespoon ginger, minced"
+        ],
+        "preparing_time": 25,
+        "calories": 250
+    },
+    {
+        "recipe_id": "3",
+        "recipe_name": "Mushroom Risotto",
+        "recipe_img": "https://i.ibb.co/ZK6D8C6/Mushroom-Risotto.jpg",
+        "short_description": "Creamy and flavorful risotto cooked with mushrooms and Parmesan cheese",
+        "ingredients": [
+            "1 1/2 cups Arborio rice",
+            "1/2 cup dry white wine",
+            "4 cups chicken or vegetable broth",
+            "1 cup sliced mushrooms (button or cremini)",
+            "1/2 cup grated Parmesan cheese",
+            "1 small onion, finely chopped",
+            "2 cloves garlic, minced",
+            "2 tablespoons butter",
+            "Salt and black pepper to taste"
+        ],
+        "preparing_time": 40,
+        "calories": 350
+    },
+    {
+        "recipe_id": "4",
+        "recipe_name": "Grilled Salmon with Lemon-Herb Butter",
+        "recipe_img": "https://i.ibb.co/W2xrK1X/Grilled-Salmon-with-Lemon-Herb-Butter.jpg",
+        "short_description": "Flaky grilled salmon fillets topped with a flavorful lemon-herb butter sauce",
+        "ingredients": [
+            "4 salmon fillets",
+            "1/4 cup unsalted butter, softened",
+            "2 tablespoons chopped fresh herbs (such as parsley, dill, and chives)",
+            "1 lemon, zest and juice",
+            "2 cloves garlic, minced",
+            "Salt and black pepper to taste"
+        ],
+        "preparing_time": 15,
+        "calories": 300
+    },
+    {
+        "recipe_id": "5",
+        "recipe_name": "Caprese Salad",
+        "recipe_img": "https://i.ibb.co/fMWjbWQ/Caprese-Salad.jpg",
+        "short_description": "Simple and refreshing Italian salad with tomatoes, mozzarella, and basil",
+        "ingredients": [
+            "2 large tomatoes, sliced",
+            "8 oz fresh mozzarella cheese, sliced",
+            "1/4 cup fresh basil leaves",
+            "2 tablespoons balsamic vinegar",
+            "2 tablespoons extra virgin olive oil",
+            "Salt and black pepper to taste"
+        ],
+        "preparing_time": 10,
+        "calories": 200
+    },
+    {
+        "recipe_id": "6",
+        "recipe_name": "Beef Tacos",
+        "recipe_img": "https://i.ibb.co/1KXBMLn/Beef-Tacos.jpg",
+        "short_description": "Tasty Mexican-style tacos with seasoned beef, salsa, and toppings",
+        "ingredients": [
+            "1 lb ground beef",
+            "1 packet taco seasoning",
+            "8 small flour or corn tortillas",
+            "1 cup shredded lettuce",
+            "1 cup diced tomatoes",
+            "1/2 cup shredded cheddar cheese",
+            "1/4 cup chopped cilantro",
+            "1/4 cup sour cream (optional)",
+            "1/4 cup salsa"
+        ],
+        "preparing_time": 30,
+        "calories": 350
+    }
+]
