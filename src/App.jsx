@@ -1,13 +1,16 @@
 
 import './App.css'
+import Hero from './componentes/hero/Hero'
+import Navber from './componentes/navber/Navber'
+import Recipes from './componentes/recipes/Recipes'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Navber></Navber>
+      <Hero></Hero>
+      <Recipes></Recipes>
     </>
   )
 }
