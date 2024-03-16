@@ -19,9 +19,15 @@ const Recipes = () => {
     }, [])
 
     const handleWantCook = item => {
-        const newCookItems = [...wantCook, item];
-        setWantCook(newCookItems);
-    }
+        const isExist = wantCook.find(wc => wc.recipe_id == item.recipe_id);
+        if (!isExist) {
+            const newCookItems = [...wantCook, item];
+            setWantCook(newCookItems);
+        }
+        else {
+            alert('already exist');
+        }
+    };
 
     const handleCooking = (cook, recipe_id) => {
         // add to cooking 
@@ -32,7 +38,7 @@ const Recipes = () => {
         const remainWantCook = wantCook.filter(want => want.recipe_id != recipe_id);
         setWantCook(remainWantCook);
 
-    }
+    };
 
     return (
         <div className="w-10/12 mx-auto my-16">
@@ -58,6 +64,7 @@ const Recipes = () => {
                         <table className="w-full mx-auto my-6 table-fixed">
                             <thead>
                                 <tr>
+                                    <th></th>
                                     <th>Name</th>
                                     <th>Time</th>
                                     <th>Calories</th>
@@ -65,9 +72,10 @@ const Recipes = () => {
                             </thead>
                             <tbody>
                                 {
-                                    wantCook.map((cook, idx) => <Cook
+                                    wantCook.map((cook, index) => <Cook
                                         handleCooking={handleCooking}
-                                        key={idx}
+                                        key={index}
+                                        index={index}
                                         cook={cook}></Cook>)
                                 }
                             </tbody>
@@ -80,6 +88,7 @@ const Recipes = () => {
                         <table className="w-full my-6 table-fixed">
                             <thead>
                                 <tr>
+                                    <th></th>
                                     <th>Name</th>
                                     <th>Time</th>
                                     <th>Calories</th>
@@ -87,9 +96,13 @@ const Recipes = () => {
                             </thead>
                             <tbody>
                                 {
-                                    cooking.map((cookingItem, idx) => <Cooking key={idx} cookingItem={cookingItem}></Cooking>)
+                                    cooking.map((cookingItem, index) => <Cooking
+                                        key={index}
+                                        index={index}
+                                        cookingItem={cookingItem}></Cooking>)
                                 }
                                 <tr>
+                                    <td></td>
                                     <td></td>
                                     <td className="pt-2">Total Time = { } minutes</td>
                                     <td className="pt-2">Total Calories = { } calories</td>
