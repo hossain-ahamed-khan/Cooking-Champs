@@ -6,7 +6,7 @@ const Cooking = ({ cookingItem }) => {
     return (
         <>
             <tr>
-                <td>{recipe_name}</td>
+                <td className='py-2'>{recipe_name}</td>
                 <td>{preparing_time}</td>
                 <td>{calories}</td>
             </tr>

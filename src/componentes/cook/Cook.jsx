@@ -5,14 +5,15 @@ const Cook = ({ cook, handleCooking }) => {
     return (
         <>
             <tr>
-                <td>{recipe_name}</td>
+                <td className='py-2'>{recipe_name}</td>
                 <td>{preparing_time}</td>
                 <td>{calories}</td>
-
-                <button
+                <td><button
                     onClick={() => handleCooking(cook, recipe_id)}
-                    className='bg-[#0BE58A] rounded-full text-[#150B2B] text-base font-medium px-4 py-2 my-2'>Preparing</button>
+                    className='bg-[#0BE58A] rounded-full text-[#150B2B] text-base font-medium px-4 py-2 my-5'>Preparing</button></td>
             </tr>
+
+
         </>
     );
 };
