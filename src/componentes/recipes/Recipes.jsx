@@ -19,12 +19,19 @@ const Recipes = () => {
 
     const handleWantCook = item => {
         const newCookItems = [...wantCook, item];
-        setWantCook(newCookItems);
+        const filteredNewCookItems = newCookItems.filter((value, index) => newCookItems.indexOf(value) === index);
+        setWantCook(filteredNewCookItems);
     }
 
-    const handleCooking = cook => {
+    const handleCooking = (cook, recipe_id) => {
+        // add to cooking 
         const newCooking = [...cooking, cook];
         setCooking(newCooking);
+
+        // remove from want to cook 
+        const remainWantCook = wantCook.filter(want => want.recipe_id != recipe_id);
+        setWantCook(remainWantCook);
+
     }
 
     return (
@@ -48,7 +55,7 @@ const Recipes = () => {
                 <div className="w-2/5 border-2 border-[#28282833] rounded-2xl text-center">
                     <div className="py-6 px-1">
                         <h1 className="text-[#282828] text-2xl font-semibold">Want to cook: {wantCook.length}</h1>
-                        <table className="w-full mx-auto my-6">
+                        <table className="w-full mx-auto my-6 table-fixed">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -70,7 +77,7 @@ const Recipes = () => {
 
                     <div className="py-6 px-1">
                         <h1 className="text-[#282828] text-2xl font-semibold">Currently cooking: {cooking.length}</h1>
-                        <table className="w-full my-6">
+                        <table className="w-full my-6 table-fixed">
                             <thead>
                                 <tr>
                                     <th>Name</th>
