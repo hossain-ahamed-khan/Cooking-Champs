@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import { CiClock2 } from "react-icons/ci";
 import { TbFlame } from "react-icons/tb";
 
+// Importing toastify module
+import { toast } from "react-toastify";
+
 const Recipe = ({ recipeItem, handleWantCook }) => {
 
     const { recipe_name, recipe_img, short_description, ingredients, preparing_time, calories } = recipeItem;
@@ -31,7 +34,7 @@ const Recipe = ({ recipeItem, handleWantCook }) => {
                 </div>
 
             </div>
-            <button onClick={() => handleWantCook(recipeItem)}
+            <button onClick={() => handleWantCook(recipeItem, toast)}
                 className='max-w-48 bg-[#0BE58A] rounded-full text-[#150B2B] text-lg font-medium px-6 py-3'>Want to Cook</button>
 
         </div>
@@ -40,7 +43,8 @@ const Recipe = ({ recipeItem, handleWantCook }) => {
 
 Recipe.propTypes = {
     recipeItem: PropTypes.object.isRequired,
-    handleWantCook: PropTypes.func
+    handleWantCook: PropTypes.func,
+    notify: PropTypes.func
 }
 
 export default Recipe;

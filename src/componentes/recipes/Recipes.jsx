@@ -11,6 +11,8 @@ const Recipes = () => {
     const [recipeItems, setRecipeItem] = useState([]);
     const [wantCook, setWantCook] = useState([]);
     const [cooking, setCooking] = useState([]);
+    const [cookingTime, setCookingTime] = useState(0);
+    const [calories, setCalories] = useState(0);
 
     useEffect(() => {
         fetch('recipe.json')
@@ -18,14 +20,14 @@ const Recipes = () => {
             .then(data => setRecipeItem(data))
     }, [])
 
-    const handleWantCook = item => {
+    const handleWantCook = (item, toast) => {
         const isExist = wantCook.find(wc => wc.recipe_id == item.recipe_id);
         if (!isExist) {
             const newCookItems = [...wantCook, item];
             setWantCook(newCookItems);
         }
         else {
-            alert('already exist');
+            toast('already exist');
         }
     };
 
@@ -37,6 +39,16 @@ const Recipes = () => {
         // remove from want to cook 
         const remainWantCook = wantCook.filter(want => want.recipe_id != recipe_id);
         setWantCook(remainWantCook);
+
+        // calculate total cooking time 
+        const cookingTimes = newCooking.map(c => c.preparing_time)
+        const cookingTimesTotal = cookingTimes.reduce((initialSum, a) => initialSum + a, 0);
+        setCookingTime(cookingTimesTotal);
+
+        // calculate total calories
+        const calories = newCooking.map(c => c.calories)
+        const caloriesTotal = calories.reduce((initialSum, a) => initialSum + a, 0);
+        setCalories(caloriesTotal);
 
     };
 
@@ -104,8 +116,8 @@ const Recipes = () => {
                                 <tr>
                                     <td></td>
                                     <td></td>
-                                    <td className="pt-2">Total Time = { } minutes</td>
-                                    <td className="pt-2">Total Calories = { } calories</td>
+                                    <td className="pt-2">Total Time = {cookingTime} minutes</td>
+                                    <td className="pt-2">Total Calories = {calories} calories</td>
                                 </tr>
                             </tbody>
                         </table>
