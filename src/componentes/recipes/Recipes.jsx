@@ -56,11 +56,11 @@ const Recipes = () => {
         <div className="w-10/12 mx-auto my-16">
             <div className="w-3/5 mx-auto text-center my-12">
                 <h3 className="text-[#150B2B] text-4xl font-semibold my-6">Our Recipes</h3>
-                <p className="text-[#150B2B99] text-base font-normal">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </p>
+                <p className="text-[#150B2B99] text-xs lg:text-base font-light lg:font-normal">Embark on a culinary journey with our curated collection of recipes. From traditional favorites to innovative dishes, there is something for every palate to enjoy. </p>
             </div>
 
-            <div className="flex gap-6">
-                <div className="w-3/5 grid grid-cols-2 gap-6">
+            <div className="flex flex-col-reverse lg:flex-row gap-6">
+                <div className="w-full lg:w-3/5 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     {
                         recipeItems.map(recipeItem => <Recipe
@@ -70,7 +70,7 @@ const Recipes = () => {
                     }
 
                 </div>
-                <div className="w-2/5 h-full border-2 border-[#28282833] rounded-2xl text-center">
+                <div className="w-full lg:w-2/5 h-full border-2 border-[#28282833] rounded-2xl text-center">
                     <div className="py-6 px-1">
                         <h1 className="w-1/2 mx-auto pb-3 text-[#282828] text-2xl font-semibold border-b-2">Want to cook: {wantCook.length}</h1>
                         <table className="w-full mx-auto my-6 table-fixed">
